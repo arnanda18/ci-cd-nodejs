@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-     res.send('Aplikasi berjalan pada runtime NodeJs Terbaru');
+     res.send('Aplikasi berjalan pada runtime NodeJs');
 });
 
 app.get('/admin', (req, res) => {
-    res.send('Welcome to Admin Page :) hehe');
+    res.send('Welcome to Admin Page :)');
 });
 
 app.get('/user', (req, res) => {
