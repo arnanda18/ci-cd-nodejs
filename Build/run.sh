@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# directory apps
 cd apps/
 
 # clone repository
