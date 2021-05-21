@@ -24,7 +24,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
+        port: 22
         script: 
           cd apps/
           git pull origin master
