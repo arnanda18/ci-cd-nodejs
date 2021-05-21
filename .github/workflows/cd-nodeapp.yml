@@ -15,7 +15,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    name: Build
+    name: Deploy NodeJs
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
