@@ -18,7 +18,7 @@ jobs:
     name: Deploy NodeJs
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh 
+    - name: executing remote ssh using key
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
