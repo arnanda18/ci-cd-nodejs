@@ -1,4 +1,4 @@
-FROM nodejs:12
+FROM node:12
 
 # Create APP Dir
 WORKDIR /usr/src/app
