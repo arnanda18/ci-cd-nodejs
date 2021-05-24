@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "script": "node index.js"
+    "script": "nodemon index.js"
   },
   "author": "arnanda",
   "license": "ISC",
