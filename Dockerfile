@@ -17,8 +17,11 @@ RUN npm install
 # Bundle APP
 COPY . /usr/src/app
 
+#config pm2
+RUN npm install pm2 -g
+
 # Expose Port APP
 EXPOSE 5000
 
 # Command Run APP
-CMD ["node", "index.js"]
+CMD ["pm2-runtime", "index.js"]
