@@ -18,17 +18,15 @@ jobs:
     name: Deploy NodeJs
     runs-on: ubuntu-latest
     steps:
-      - name : CD 
-        run : echo 'CD disabled'
-   # - name: executing remote ssh using key
-    #  uses: appleboy/ssh-action@master
-    #  with:
-     #   host: ${{ secrets.HOST }}
-     #   username: ${{ secrets.USERNAME }}
-     #   key: ${{ secrets.KEY }}
-     #   port: 22
-     #   script: |
-     #     cd apps/ci-cd-nodejs
-     #     git pull origin master
-     #     docker build -t nodeapp .
-     #     docker run --name nodejs_app -p 49160:5000 -d nodeapp:latest 
+    - name: executing remote ssh using key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: 22
+        script: |
+          cd apps/ci-cd-nodejs
+          git pull origin master
+          docker build -t nodeapp .
+          docker run --name nodejs_app -p 49160:5000 -d nodeapp:latest 
