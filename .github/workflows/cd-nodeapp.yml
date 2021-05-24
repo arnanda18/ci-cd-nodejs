@@ -29,4 +29,4 @@ jobs:
           cd apps/ci-cd-nodejs
           git pull origin master
           docker build -t nodeapp .
-          docker run --name nodejs_app -p 49160:5000 -d nodeapp:latest 
+          docker run --name nodejs_app -p 5000:5000 -d nodeapp 
